@@ -4,5 +4,6 @@
         "ostream": "cpp",
         "ios": "cpp",
         "iomanip": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }
