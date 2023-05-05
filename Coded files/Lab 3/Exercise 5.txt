@@ -1,0 +1,20 @@
+#define _USE_MATH_DEFINES
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main(){
+    
+   // Lab3/Exercise 5
+
+      const double PI = 3.141592;
+      double radius, area, circumference;
+      cout << "Enter the radius: ";
+      cin >> radius;
+      area = PI * radius * radius;// calculate the area
+      circumference = 2.0 * PI * radius; //calculate the circumference
+      cout << "Radius: " << fixed << setprecision(6) << radius << endl;
+      cout << "Circle area = " << area << ", Circumference = " << circumference;
+
+      return 0;
+}

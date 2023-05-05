@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    //Lab3/Exercise6
+      int a,b;
+      cout << " Input two integer numbers: ";
+      cin >> a >> b;
+      cout << "You entered: " << a << ", " << b << endl << endl;
+
+      cout << a << " + " << b << " = " << a+b << endl;
+      cout << a << " - " << b << " = " << a-b << endl;
+      cout << a << " * " << b << " = " << a*b << endl;
+      cout << float(a) << " / " << float(b) << " = " << float(a)/float(b) << endl;
+
+      return 0;
+}

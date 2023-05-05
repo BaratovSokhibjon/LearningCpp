@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+
+   short hour, minutes, seconds;
+
+   cout << "Input hours:"; cin >> hour;
+   cout << endl << "Input minutes:"; cin >> minutes;
+   cout << endl << "Input seconds:"; cin >> seconds;
+   cout << endl << endl;
+   cout << "Total seconds:" << ((hour*60)*60) + (minutes*60) + seconds << endl;
+   float total_mins = (hour*60.0) + minutes + (seconds/60.0);
+   cout << "Total minutes:" <<  total_mins;
+
+    return 0;
+}

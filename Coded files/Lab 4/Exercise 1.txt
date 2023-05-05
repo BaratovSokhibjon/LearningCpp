@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main (){
+
+   int a;
+   cout << "Input the current temperature: ";
+   cin >> a;
+   if (a<0)
+   {
+      cout << "Freezing weather";
+   }else if (a <);
+   {
+   }
+
+}

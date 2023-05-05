@@ -1,0 +1,19 @@
+#define PI (3.14)
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main(){
+    //Lab9 Exercise 1
+
+    int i;
+    for (i = 0; i <= 360; i++) {
+
+       double i_rad = i / 180.0 * M_PI;
+
+       double x = 10 * (cos(i_rad)); //x = r (cos (degrees°)),
+       double y = 10 * (sin(i_rad)); //y = r (sin (degrees°))
+
+       cout << i << ": " << x << ", " << y << endl;
+    }
+}

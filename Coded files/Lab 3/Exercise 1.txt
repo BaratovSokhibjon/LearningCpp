@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std
+
+int main(){
+    char t = 'T';
+      string str = "Hello Inha";
+      int fortyk = 40000;
+      int twomil = 2000000;
+      long long loo= 2200000000;
+      float flo = 178.5;
+      long double looo = 3ULL * pow(10, 123);
+
+      cout << t << endl;
+      cout << str << endl;
+      cout << fortyk << endl;
+      cout << twomil << endl;
+      cout << loo << endl;
+      cout << flo << endl;
+      cout << looo << scientific << endl;
+
+      return 0;
+}
