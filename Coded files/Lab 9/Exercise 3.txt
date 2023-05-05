@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+//function prototypes
+
+int display(char a);
+int display(int a);
+float display(double a);
+
+
+int main(){
+
+    display('A');
+    display(123);
+    display(123.4);
+
+    return 0;
+}
+
+//function defenitions
+
+int display(char a){
+    cout << "char type: " << a << endl;
+
+    return 0;
+}
+
+int display(int a){
+    cout << "int type: " << a << endl;
+
+    return 0;
+}
+
+float display(double a){
+    cout << "double type: " << a << endl;
+
+    return 0;
+}
