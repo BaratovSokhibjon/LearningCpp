@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int nDigits(int);
+
+int main(void)
+{
+   cout << nDigits(1) << ":" << 1 << endl;
+   cout << nDigits(10) << ":" << 10 << endl;
+   cout << nDigits(999) << ":" << 999 << endl;
+   cout << nDigits(1230) << ":" << 1230 << endl;
+   cout << nDigits(-1) << ":" << -1 << endl;
+   cout << nDigits(-10) << ":" << -10 << endl;
+   cout << nDigits(-999) << ":" << -999 << endl;
+   cout << nDigits(-1230) << ":" << -1230 << endl;
+   
+   return 0;
+}
+
+int nDigits(int num)
+{  if (num > -10 && num < 10) return 1;
+   if (num < 0) {
+      num = -num;
+      return 1 + nDigits(num / 10);
+   }
+  
+   return 1 + nDigits(num / 10);
+}
