@@ -1,0 +1,51 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+   cout << "Program output of exercise #3" << endl
+        << endl;
+   int rows = 0;
+   do
+   {
+      cout << "Input number of row of the diamond" << endl
+           << "- Input # of rows: ";
+      cin >> rows;
+      if (rows <= 0 || rows % 2 == 0)
+      {
+         cout << "Input must be a positive odd number. Try again ..." << endl;
+      }
+      else
+      {
+         continue;
+      }
+   } while (rows <= 0 || rows % 2 == 0);
+      for (int i = 0; i <= rows / 2; i++)
+   {
+      for (int j = 0; j < rows / 2 - i; j++)
+      {
+         cout << " ";
+      }
+      for (int k = 0; k < 2 * i + 1; k++)
+      {
+         cout << setw(2) << static_cast<char>(65 + i);
+      }
+      cout << endl;
+   }
+
+   for (int i = rows / 2 - 1; i >= 0; i--)
+   {
+      for (int j = 0; j < rows / 2 - i; j++)
+      {
+         cout << " ";
+      }
+      for (int k = 0; k < 2 * i + 1; k++)
+      {
+         cout << setw(2) << static_cast<char>(65 + i);
+      }
+      cout << endl;
+   }
+
+   return 0;
+}

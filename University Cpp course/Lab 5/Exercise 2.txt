@@ -1,0 +1,41 @@
+/*
+Write a program to calculate the following equations.  
+➢Use for statement  
+➢Exactly follow the programoutput format as shown below
+
+Sample output:
+Program output of exercise#2 ===>  
+S1 = 11435  
+S2 = 4424  
+<===End of the program output
+*/
+
+#include <iostream> 
+#include <cmath>
+using namespace std;
+
+int main(){
+   int S1 = 0;
+   int S2 = 0;
+   
+   // Output header for the program
+   cout << "Program output of exercise#2 ===> " << endl;
+   
+   // Calculation for S1
+   for(int i = 1; i <= 30; i++){
+      S1 = S1 + (pow((i+2), 2));
+   }
+   cout << "S1 = " << S1 << endl;
+
+   // Calculation for S2
+   for(int i = -10; i <= 10; i++){
+      for(int j = 1; j <= 4; j++){
+         S2 = S2 + ((i*i) + 2*j*j + 1);
+      }
+   }
+   
+   cout << "S2 = " << S2 << endl;
+   
+   // Output footer for the program
+   cout << "<===End of the program output";
+}
