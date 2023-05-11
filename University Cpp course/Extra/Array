@@ -1,0 +1,13 @@
+> Array is a collection of data to hold multiple values of "same type".
+> Need to know exact number of values I need to use "Array"
+
+Array is plased in contiguous memory locations that can be accesed by
+adding a unique quantifier.
+
+Array is declared by adding a quantity of variables in square brackets 
+after array name variable.
+
+To access array variables: arrayvariable[address];
+To assign a value: arrayvariable[address] = newValue; // arrayvariable[4] = arrayvariable[0]
+
+Always initialize the arrayvariables!

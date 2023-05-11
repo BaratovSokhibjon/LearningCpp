@@ -1,0 +1,29 @@
+Default arguments:
+
+We can only provide default function
+arguments in "Function prototype only".
+
+Normally the function prototype is like this:
+
+the value assignement is location based, this means 
+that I cannot put a default value to a varible 
+in the beginning and skip a variable and add another 
+default value. 
+
+void temp(int = 3, float = 3.4);
+
+in function call:
+
+void temp(4); == (4, 3.4)
+
+you cannot do:
+
+void temp(, 3.4);
+
+instead function prototype should be changed to:
+
+void temp(float = 3.4, int  = 3);
+
+in function call:
+
+void temp(3.9); ==> (3.9, 3)
