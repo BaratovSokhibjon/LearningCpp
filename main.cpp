@@ -1,24 +1,48 @@
 #include <iostream>
+
 using namespace std;
 
-int main(){
+#define ASCENDING (0)
+#define DESCENDING (1)
+const int SIZE = 10;
 
-    int sui = 4;
-    int iarr[sui];
-    for(int j = 0; j < sui; j++){
-        cout << "Input the values for iarr:";
-        cin >> iarr[j]; // Initialised automatically
+void mySort(double arr[], )
+
+int main() {
+    double data[SIZE] = { 0 };
+    double sorted[SIZE] = { 0 };
+    int  i;
+    for (i = 0; i < SIZE; ++i) {
+        cout << "Enter a real number: ";
+        cin >> data[i];
     }
-
-    cout << "Array values:";
-    for(int j = 0; j < sui; j++){
-        cout << iarr[j]; // printing out the values
-    }
-
-    //If values provided manually, no need to state the length of the array
-    int iarra[] = {1,2,3,4,5,6};
-
-    int array[5] = {1,2,}; // (1,2,0,0,0)
-
+    cout << "== Input numbers ==" << endl;
+    print_array(data, SIZE);
+    cout << "== Ascending order ==" << endl;
+    mySort(data, sorted, SIZE);
+    print_array(sorted, SIZE);
+    cout << "== Descending order ==" << endl;
+    mySort(data, sorted, SIZE, DESCENDING);
+    print_array(sorted, SIZE);
     return 0;
+}
+
+void selection_sort(int list[], int n) {
+    int i, j, temp, least;
+
+    // Repeat n-1 times 
+    // because the last number is automatically sorted
+    for (i = 0; i < n - 1; i++) {
+        least = i;
+        // search minimum value
+        for (j = i + 1; j < n; j++)
+            if (list[j] < list[least])
+                least = j;
+        // swap the min value and list[i]
+        if (least != i) {
+            temp = list[i];
+            list[i] = list[least];
+            list[least] = temp;
+        }
+    }
 }

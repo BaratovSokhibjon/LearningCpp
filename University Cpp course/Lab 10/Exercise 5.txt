@@ -1,0 +1,67 @@
+
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main()
+{
+    srand(static_cast<unsigned>(time(0)));
+
+    const int problemCount = 9;
+    int correctCount = 0;
+    int incorrectCount = 0;
+
+    int firstNumbers[3];
+    int secondNumbers[3];
+
+    // Generate random numbers between 0 and 100 for the two arrays
+    for (int i = 0; i < 3; i++)
+    {
+        firstNumbers[i] = rand() % 101;
+        secondNumbers[i] = rand() % 101;
+    }
+
+    for (int i = 0; i < problemCount; i++)
+    {
+        int operation = rand() % 2; // 0 for addition, 1 for subtraction
+
+        int firstIndex = i % 3;
+        int secondIndex = (i + 1) % 3;
+
+        int first = firstNumbers[firstIndex];
+        int second = secondNumbers[secondIndex];
+        int answer;
+
+        if (operation == 0)
+        {
+            answer = first + second;
+            cout << first << "+" << second << "=";
+        }
+        else
+        {
+            answer = first - second;
+            cout << first << "-" << second << "=";
+        }
+
+        int userAnswer;
+        cin >> userAnswer;
+
+        if (userAnswer == answer)
+        {
+            cout << "Correct!!!!" << endl;
+            correctCount++;
+        }
+        else
+        {
+            cout << "Incorrect.." << endl;
+            incorrectCount++;
+        }
+    }
+
+    cout << "Total # of math questions: " << problemCount << endl;
+    cout << "# of correct answers: " << correctCount << endl;
+    cout << "# of incorrect answers: " << incorrectCount << endl;
+
+    return 0;
+}

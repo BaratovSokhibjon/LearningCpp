@@ -1,0 +1,39 @@
+#include <iostream>
+#include <iomanip>
+#include <ctime>
+#include <cstdlib>
+
+using namespace std;
+
+int get_random();
+
+int main()
+{
+        srand(time(NULL));
+        double d[7] = {0};
+
+        for (int i = 1; i <= 1000000; i++)
+        {
+           int a = get_random();
+            d[a]++;
+        }
+
+        for (int j = 1; j <= 6; j++)
+        {
+           double perc = (static_cast<double>(d[j]) / 1000000) * 100;
+
+           cout << j << ": " << d[j] << ", ";
+           
+           cout << fixed;
+           
+           cout << perc << "%" << endl;
+        }
+
+
+   return 0;
+}
+
+int get_random()
+{
+   return rand() % 6 + 1;
+}

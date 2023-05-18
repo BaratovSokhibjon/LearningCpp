@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+void coutInt(int value, int base = 10, const char* end_string = "\n");
+
+int main()
+{
+    //coutInt(value, base, end_string) 
+    coutInt(128);
+    coutInt(128, 10, " ");
+    coutInt(128, 10);
+    coutInt(128, 8, ", ");
+    coutInt(128, 8);
+    coutInt(128, 16);
+
+    return 0;
+}
+
+void coutInt(int value, int base, const char* end_string)
+{
+    switch (base)
+    {
+    case 10:
+        cout << dec << value << end_string;
+        break;
+    case 8:
+        cout << oct << value << end_string;
+        break;
+    case 16:
+        cout << hex << value << end_string;
+        break;
+    default:
+        break;
+    } 
+}
+

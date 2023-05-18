@@ -1,0 +1,29 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main()
+{
+    cout << "== Receiving Values ==" << endl;
+    double smth[10];
+    for (int i = 0; i < 10; i++)
+    {
+        smth[i] = 0;
+    }
+
+    for (int i = 0; i < 10; i++)
+    {
+        cout << "Enter a real number: ";
+        cin >> smth[i];
+    }
+
+    cout << "== Printing the values in reverse order==" << endl;
+
+    int n = sizeof(smth) / sizeof(smth[0]);
+    reverse(smth, smth + n);
+
+    for (int i = 0; i < 10; i++)
+    {
+        cout << smth[i] << " ";
+    }
+};

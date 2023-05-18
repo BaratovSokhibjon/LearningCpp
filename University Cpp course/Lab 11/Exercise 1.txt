@@ -1,0 +1,47 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main(){
+    double x[10] = {3.0, 4.5, 5.5, 6.5, 7.5, 8.5, 8.0, 9.0, 9.5, 10.0};
+    double y[10] = {1.5, 2.0, 3.5, 5.0, 6.0, 7.5, 9.0, 10.5, 12.0, 14.0};
+    double sum_x = 0.0;
+    double sum_y = 0.0;
+
+    for(int i = 0; i < 10; i++){
+        sum_x += x[i];  
+        sum_y += y[i];      
+    }
+
+    double avg_x = sum_x / 10.0;
+    double avg_y = sum_y / 10.0;
+
+    double solving_B_top_left = 0.0;
+    for(int i = 0; i < 10; i++){
+        solving_B_top_left += x[i]*y[i]; 
+    }
+    double solving_B_top_right_x = 0.0;
+    for(int i = 0; i < 10; i++){
+        solving_B_top_right_x += x[i]; 
+    }
+    double solving_B_top_right_y = 0.0;
+    for(int i = 0; i < 10; i++){
+        solving_B_top_right_y += y[i]; 
+    }
+    double solving_B_bottom_left = 0.0;
+    for(int i = 0; i < 10; i++){
+        solving_B_bottom_left += pow(x[i], 2); 
+    }
+    double solving_B_bottom_right_half = 0.0;
+    for(int i = 0; i < 10; i++){
+        solving_B_bottom_right_half += x[i];
+    }
+    double solving_B_bottom_right = pow(solving_B_bottom_right_half, 2);
+
+    double b = ((10*solving_B_top_left)-(solving_B_top_right_x*solving_B_top_right_y))/((10*solving_B_bottom_left)-(solving_B_bottom_right));
+    double a = (avg_y - (b*avg_x));
+
+    cout << "Line: y = " << a << " + " << b << "x";
+
+}
