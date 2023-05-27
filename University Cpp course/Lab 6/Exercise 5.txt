@@ -1,0 +1,53 @@
+#define _USE_MATH_DEFINES
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    cout << "Select a shape (r: rectangle, t: triangle, c: circle):";
+    char shape;
+    cin >> shape;
+
+    switch (shape)
+    {
+    case 'r':
+        cout << "== Area calculation (rectangle) ==" << endl;
+        cout << "Input width: ";
+        float width;
+        cin >> width;
+        cout << "Input height: ";
+        float height;
+        cin >> height;
+        cout << "Area: " << width*height << endl;
+
+        break;
+    
+    case 't':
+        cout << "== Area calculation (triangle) ==" << endl;
+        cout << "Input base: ";
+        float base;
+        cin >> base;
+        cout << "\nInput height: ";
+        float height_tri;
+        cin >> height_tri;
+        cout << "Area: " << (base*height_tri)/2 << endl;
+
+        break;
+
+    case 'c':
+        cout << "== Area calculation (circle) ==" << endl;
+        cout << "Input radius: ";
+        float rad;
+        cin >> rad;
+        cout << "Area: " << M_PI*rad*rad << endl;
+
+        break;
+
+    default:
+        cout << "Invalid selection ... try again ...";
+    }
+
+    cout << "\n==End of program==";
+    return 0;
+}

@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout << "How many real numbers to input: ";
+    int n;
+    cin >> n;
+    float numbers[n];
+    for (int i = 0; i < n; i++)
+    {
+        cout << "\nInput a real number: ";
+        cin >> numbers[i];
+    }
+
+    cout << "Among " << n << " inputs," << endl;
+
+    float min = numbers[0];
+    int min_indx = 0;
+    for (int i = 1; i < n; i++)
+    {
+        if (numbers[i] < min)
+        {
+            min = numbers[i];
+            min_indx = i;
+        }
+    }
+
+    int max_indx = 0;
+    float max = numbers[0];
+    for (int i = 1; i < n; i++)
+    {
+        if (numbers[i] > max)
+        {
+            max = numbers[i];
+            max_indx = i;
+        }
+    }
+
+    cout << min << " is the smallest value and it was #" << min_indx + 1 <<" input" << endl;
+    cout << max << " is the biggest value and it was E" << max_indx + 1 <<" input" <<  endl;
+}
