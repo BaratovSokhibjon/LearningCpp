@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+
+    cout << "Enter an even number: ";
+        int n;
+        cin >> n;
+        cout << endl;
+
+    while(n % 2 != 0){
+
+            cout << "Try again please ..." << endl;
+            cout << "Enter an even number: ";
+            cin >> n;
+            cout << endl;
+    }
+    cout << "Good!!!";
+}

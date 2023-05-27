@@ -1,0 +1,42 @@
+
+#include <iostream>
+
+using namespace std;
+
+void drawRectangle(int w, int l, char pattern);
+
+int main()
+{
+    int w, l;
+    char pattern;
+
+    cout << "Enter width and length of the rectangle: ";
+    cin >> w >> l;
+
+    cout << "Width: " << w << endl;
+    cout << "Length: " << l << endl;
+
+    cout << "Enter a character for the border pattern of the rectangle: ";
+    cin >> pattern;
+
+    drawRectangle(w, l, pattern);
+
+    return 0;
+}
+
+void drawRectangle(int w, int l, char pattern)
+{
+    for(int i = 0; i < l; i++){
+        for(int j = 0; j < w; j++){
+            if(i == 0 || i == l - 1 || j == 0 || j == w - 1){
+                cout << pattern;
+            }
+            else{
+                cout << " ";
+            }
+            
+        }
+        cout << endl;
+    }
+
+}
