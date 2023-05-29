@@ -1,0 +1,36 @@
+
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+#define LEFT   (0) 
+#define RIGHT  (1)
+#define CENTER (2)
+
+int formattedCout(string str, int alignment, int line_width) {
+    int total_spaces = line_width - str.length();  // Calculate the total number of spaces needed
+
+    switch (alignment) {
+        case LEFT:
+            cout << left << setw(line_width) << str;
+            break;
+        case RIGHT:
+            cout << right << setw(line_width) << str;
+            break;
+        case CENTER:
+            int left_spaces = total_spaces / 2;
+            int right_spaces = total_spaces - left_spaces;
+            cout << setw(left_spaces) << "" << str << setw(right_spaces) << "";
+            break;
+    }
+
+    cout << endl;
+    return 0;
+}
+
+int main(void) {
+    formattedCout("Hello Inha", LEFT, 80);
+    formattedCout("Welcome. SCGS Students!!!", CENTER, 80);
+    formattedCout("Welcome Korea", RIGHT, 80);
+    return 0;
+}
