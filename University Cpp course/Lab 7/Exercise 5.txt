@@ -1,0 +1,74 @@
+#include <iostream>
+#include <limits>
+
+using namespace std;
+
+string getString(const string &prompt, const string &tryMsg)
+{
+    string input;
+    while (true)
+    {
+        cout << prompt;
+        cin >> input;
+        if (!input.empty())
+        {
+            break;
+        }
+        cout << tryMsg << endl;
+    }
+    return input;
+}
+
+int getInteger(const string &prompt, const string &tryMsg)
+{   
+    int input;
+    while (true)
+    {  
+        cout << prompt;
+        cin >> input;
+        if (cin.fail())
+        {
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        }
+        else
+        {
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            break;
+        }
+        cout << tryMsg << endl;
+    }
+    return input;
+}
+
+double getDouble(const string &prompt, const string &tryMsg)
+{
+    double input;
+    while(true){
+        cout << prompt;
+        cin >> input;
+        if(cin.fail()){
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        }else{
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            break;
+        }
+        cout << tryMsg << endl;
+    }
+    return input;
+}
+
+int main()
+{
+    string tryMsg = "Try again ...";
+    string str = getString("Input a string: ", tryMsg);
+    cout << "Your input string: " << str << endl;
+    int i = getInteger("Input an integer number: ", tryMsg);
+    cout << "Your input integer: " << i << endl;
+    double k = getDouble("Input a real number: ", tryMsg);
+    cout << "Your input float: " << k << endl;
+    cout << endl
+         << "=== End of the program ===";
+    return 0;
+}
