@@ -1,0 +1,52 @@
+#include <iostream>
+using namespace std;
+
+struct Point{
+    double x;
+    double y;
+};
+
+struct Circle{
+    Point Center;
+    double radius;
+};
+
+bool isInside(Circle c, Point p);
+
+int main()
+{
+    // Point={x,y}
+    Point p1 = {0, 0}, p2 = {9.5, 9.5};
+    // Circle={center{x,y},radius}
+    Circle c1 = {{2.5, 2.5}, 4.5};
+    if (isInside(c1, p1))
+    {
+        cout << "Point p1 is located inside or on the boundary of the circle." << endl;
+    }
+    else
+    {
+        cout << "Point p1 is outside the circle." << endl;
+    }
+    if (isInside(c1, p2))
+    {
+        cout << "Point p2 is located inside or on the boundary of the circle." << endl;
+    }
+    else
+    {
+        cout << "Point p2 is outside the circle." << endl;
+    }
+    return 0;
+}
+
+bool isInside(Circle c, Point p){
+    double equation = (((p.x - c.Center.x))*((p.x - c.Center.x))) + ((p.y - c.Center.y)*(p.y - c.Center.y));
+    double distanceOfCircle = c.radius * c.radius;
+
+    if(equation <= distanceOfCircle){
+        return true;
+    }else
+    {
+        return false;
+    }
+    
+}

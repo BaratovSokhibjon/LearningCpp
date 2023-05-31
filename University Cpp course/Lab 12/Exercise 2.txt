@@ -1,39 +1,37 @@
 #include <iostream>
-#include <string>
-
 using namespace std;
 
-struct date {
+struct date{
     int year;
     int month;
     int day;
 };
 
-struct student {
+struct student{
     int id;
     date dob;
-    date grad;
+    date gradDate;
 };
 
-student getStudentInfo() {
-    student s;
+string months[12] = {"January ", "February ", "March ", "April ", "May ", "June ","July ", "August ", "September ", "October ", "November ", "December "};
 
+void displayStudentInfo(student s){
+    struct student;
+    cout << "Student ID: " << s.id << endl;
+    cout << "Date of birth: " << months[s.dob.month - 1] << s.dob.day << ", " << s.dob.year << endl;
+    cout << "Expected graduation date: " << months[s.gradDate.month - 1] << s.gradDate.day << ", " << s.gradDate.year << endl;
+}
+
+student getStudentInfo(void){
+    struct student s;
     cout << "Student ID: ";
     cin >> s.id;
     cout << "Date of birth (Y M D): ";
     cin >> s.dob.year >> s.dob.month >> s.dob.day;
-    cout << "Expected graduation date: ";
-    cin >> s.grad.year >> s.grad.month >> s.grad.day;
+    cout << "Expected graduation date(Y M D): ";
+    cin >> s.gradDate.year >> s.gradDate.month >> s.gradDate.day;
 
     return s;
-}
-
-void displayStudentInfo(const student& s) {
-    string months[12] = {"January", "February", "March", "April", "May", "June",
-                         "July", "August", "September", "October", "November", "December"};
-    cout << "Student ID: " << s.id << endl;
-    cout << "Date of birth: " << months[s.dob.month - 1] << " " << s.dob.day << ", " << s.dob.year << endl;
-    cout << "Expected graduation date: " << months[s.grad.month - 1] << " " << s.grad.day << ", " << s.grad.year << endl;
 }
 
 int main()
@@ -48,3 +46,5 @@ int main()
     displayStudentInfo(s1);
     return 0;
 }
+
+
