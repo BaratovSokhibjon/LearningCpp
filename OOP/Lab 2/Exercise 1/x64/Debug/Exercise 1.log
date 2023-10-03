@@ -1,0 +1,7 @@
+﻿  Exercise 2.cpp
+  main.cpp
+  Generating Code...
+main.obj : error LNK2005: "void __cdecl inputArray(int *,int)" (?inputArray@@YAXPEAHH@Z) already defined in Exercise 2.obj
+main.obj : error LNK2005: "int __cdecl searchIndex(int *,int,int)" (?searchIndex@@YAHPEAHHH@Z) already defined in Exercise 2.obj
+main.obj : error LNK2005: main already defined in Exercise 2.obj
+C:\Users\aa\OneDrive\Desktop\GitHub\forfile\LearningCpp\OOP\Exercise 1\Exercise 1\x64\Debug\Exercise 1.exe : fatal error LNK1169: one or more multiply defined symbols found
