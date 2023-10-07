@@ -1,2 +1,6 @@
-﻿  main.cpp
-  Exercise 1.vcxproj -> C:\Users\aa\Documents\GitHub\forfile\LearningCpp\OOP\Lab 5\Exercise 1\x64\Debug\Exercise 1.exe
+﻿C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (Exercise 1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  main.cpp
+  types_of_initialization.cpp
+  Generating Code...
+types_of_initialization.obj : error LNK2005: main already defined in main.obj
+C:\Users\aa\Documents\GitHub\forfile\LearningCpp\OOP\Lab 5\Lecture notes\x64\Debug\Lecture notes.exe : fatal error LNK1169: one or more multiply defined symbols found

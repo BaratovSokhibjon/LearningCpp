@@ -1,19 +1,26 @@
-#ifndef __CIRCLE_
-#define __CIRCLE_
 #include <iostream>
-#include "point.h"
-using namespace std;
+#include "Point.h"
+#pragma once
+#ifndef _circle__
+#define _circle__
 
-class circle {
-	point p;
-	double radius;
+class Circle {
+private:
+	Point m_center;
+	double m_radius;
 public:
-	circle(point p, double radius) {
-		cout << "Center: [" << p.getX() << ", " << p.getY() << "]";
-		cout << ", Radius: " << radius;
-	}
-	circle(double x, double y, double radius) {
+	Circle(): m_center(0, 0), m_radius(0) {}
+	Circle(Point center, double radius) : m_center(center), m_radius(radius) {}
+	Circle(double x, double y, double radius) : m_center(x,y), m_radius(radius) {}
 
+	~Circle() { cout << "Destruction of class instance \n"; info(); }
+
+	void info(void) {
+		cout << "Center: [";
+		double x, y;
+		m_center.get(x, y);
+		cout << x <<", " << y << " ], Radius: " << m_radius << endl;
 	}
 };
-#endif // !__CIRCLE_
+
+#endif // !_circle__

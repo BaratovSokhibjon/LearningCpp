@@ -1,37 +1,33 @@
-#ifndef _POINT_
-#define _POINT_
 #include <iostream>
-
+#pragma once
+#ifndef _point__
+#define _point__
 using namespace std;
-
-class point {
+class Point {
+private:
 	double m_x;
 	double m_y;
 public:
-	point(double o_x, double o_y) {
-		m_x = o_x;
-		m_y = o_y;
-	}
-
+	Point() : m_x(0), m_y(0) {}
+	Point(double x, double y) : m_x(x), m_y(y) {}
 	void info(void) {
-		cout << "x: " << m_x << endl;
-		cout << "y: " << m_y << endl;
+		cout << "(x,y) = " << m_x << ", " << m_y << endl;
+	}
+	
+	double getx(void) {
+		double p = m_x;
+		return p;
 	}
 
-	double getX(void) { double x = m_x; return x; }
-
-	double getY(void) { double y = m_y; return y; }
-
-	double get(double& x, double& y) {
-		x = point::getX();
-		y = point::getY();
-
-		return x, y;
+	double gety(void) {
+		double p = m_y;
+		return p;
 	}
 
+	void get(double& x, double& y) {
+		x = getx();
+		y = gety();
+	}
 };
 
-
-
-
-#endif //_POINT_
+#endif //_point__

@@ -128,7 +128,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="constructors.h" />
     <ClCompile Include="get_set_class_private_vars.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="types_of_initialization.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

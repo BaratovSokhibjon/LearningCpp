@@ -21,6 +21,4 @@ int main() {
 	int i3{ 3 };	// brace or uniform initialization
 	int i4 = { 4 }; // copy brace initialization
 	int i0{};		// zero initialization
-
-
 }
