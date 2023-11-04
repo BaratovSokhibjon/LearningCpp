@@ -27,7 +27,9 @@ public:
 		else
 			return err;
 	}
-};int main() {
+};
+
+int main() {
 	int i;
 	cout << "=== IntArray a{ 10 } ===" << endl;
 	IntArray a{ 10 };
@@ -43,7 +45,10 @@ public:
 	for (i = 0; i < 10; ++i)
 		cout << a.get(i, -1) << ' ';
 	return 0;
-}/*
+}
+
+
+/*
 === IntArray a{ 10 } ===
 a: 5 15 25 35 45 55 65 75 85 95
 === IntArray b{ a } ===
